@@ -17,9 +17,25 @@ npx serve .
 python3 -m http.server 8080
 ```
 
-## Deployment
+## CI/CD Pipeline
 
-Every push to `main` triggers the GitHub Actions workflow (`.github/workflows/deploy.yml`) which deploys to GitHub Pages automatically.
+### Validation (all PRs)
+
+Every pull request targeting `main` or `staging` runs `.github/workflows/ci.yml`:
+
+- **HTML lint** — `htmlhint` validates all HTML files
+- **Link check** — `lychee` verifies all links in HTML files are reachable
+
+### Deployment
+
+| Branch    | Environment | Trigger            |
+|-----------|-------------|--------------------|
+| `main`    | Production  | Push → auto-deploy |
+| `staging` | Staging     | Push → auto-deploy |
+
+Both environments run the full validation suite before deploying. A failed validation blocks deployment.
+
+`.github/workflows/deploy.yml` handles both environments. The `staging` GitHub Pages environment must be configured in repo settings with its own Pages source if you want a separate staging URL (or use a separate repo/branch).
 
 ## Repository structure
 
@@ -27,7 +43,8 @@ Every push to `main` triggers the GitHub Actions workflow (`.github/workflows/de
 website-landing-page/
 ├── .github/
 │   ├── workflows/
-│   │   └── deploy.yml        # GitHub Pages deployment
+│   │   ├── ci.yml            # PR validation (HTML lint + link check)
+│   │   └── deploy.yml        # Staging + production deployment
 │   ├── ISSUE_TEMPLATE/
 │   │   ├── bug_report.md
 │   │   └── feature_request.md

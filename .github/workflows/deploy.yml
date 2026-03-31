@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - staging
   workflow_dispatch:
 
 permissions:
@@ -12,11 +13,67 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.ref_name }}"
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  validate:
+    name: Validate HTML & links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install htmlhint
+        run: npm install -g htmlhint
+
+      - name: Lint HTML
+        run: htmlhint "**/*.html" --ignore "node_modules/**"
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --exclude "https://fonts.googleapis.com"
+            --exclude "https://fonts.gstatic.com"
+            "*.html"
+          fail: true
+
+  deploy-staging:
+    name: Deploy to Staging
+    if: github.ref_name == 'staging'
+    needs: validate
+    environment:
+      name: staging
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages (staging)
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  deploy-production:
+    name: Deploy to Production
+    if: github.ref_name == 'main'
+    needs: validate
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
