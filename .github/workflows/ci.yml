@@ -33,5 +33,6 @@ jobs:
             --no-progress
             --exclude "https://fonts.googleapis.com"
             --exclude "https://fonts.gstatic.com"
+            --exclude "mailto:"
             "*.html"
           fail: true
