@@ -1,3 +1,142 @@
+/* === Navigation: Hamburger Menu, Active Section, Scroll Effects === */
+(function () {
+  var nav = document.getElementById('main-nav');
+  var hamburger = document.getElementById('nav-hamburger');
+  var menu = document.getElementById('nav-menu');
+  var logoHome = document.getElementById('logo-home');
+  var navLinks = document.querySelectorAll('.nav-link[data-section]');
+  if (!nav || !hamburger || !menu) return;
+
+  // Create overlay element
+  var overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  overlay.id = 'nav-overlay';
+  document.body.appendChild(overlay);
+
+  function openMenu() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    menu.classList.add('open');
+    overlay.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('open');
+    overlay.classList.remove('visible');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', function () {
+    if (menu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close menu on link click (mobile)
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close menu on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+      closeMenu();
+      hamburger.focus();
+    }
+  });
+
+  // Logo scroll-to-top
+  logoHome.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    closeMenu();
+  });
+
+  // Nav scrolled state
+  var lastScrollY = 0;
+  function updateNavScroll() {
+    if (window.scrollY > 20) {
+      nav.classList.add('nav-scrolled');
+    } else {
+      nav.classList.remove('nav-scrolled');
+    }
+    lastScrollY = window.scrollY;
+  }
+
+  // Active section highlighting
+  var sections = [];
+  navLinks.forEach(function (link) {
+    var id = link.getAttribute('data-section');
+    var el = document.getElementById(id);
+    if (el) sections.push({ id: id, el: el, link: link });
+  });
+
+  function updateActiveSection() {
+    var scrollPos = window.scrollY + 120;
+    var activeId = null;
+
+    for (var i = sections.length - 1; i >= 0; i--) {
+      if (sections[i].el.offsetTop <= scrollPos) {
+        activeId = sections[i].id;
+        break;
+      }
+    }
+
+    navLinks.forEach(function (link) {
+      if (link.getAttribute('data-section') === activeId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  // Throttled scroll handler
+  var scrollTicking = false;
+  window.addEventListener('scroll', function () {
+    if (!scrollTicking) {
+      requestAnimationFrame(function () {
+        updateNavScroll();
+        updateActiveSection();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  }, { passive: true });
+
+  updateNavScroll();
+  updateActiveSection();
+})();
+
+/* === Footer Newsletter Signup === */
+(function () {
+  var form = document.querySelector('.footer-newsletter');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var input = form.querySelector('.footer-email-input');
+    var btn = form.querySelector('.footer-subscribe-btn');
+    if (!input.value) return;
+
+    btn.textContent = 'Sent!';
+    btn.style.background = '#22c55e';
+    input.value = '';
+
+    setTimeout(function () {
+      btn.textContent = 'Subscribe';
+      btn.style.background = '';
+    }, 2500);
+  });
+})();
+
 /* === Testimonial Carousel === */
 (function () {
   const track = document.querySelector('.testimonial-track');
