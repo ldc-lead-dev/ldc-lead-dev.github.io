@@ -107,3 +107,98 @@
   var statsSection = document.querySelector('.proof-stats');
   if (statsSection) observer.observe(statsSection);
 })();
+
+/* === Team Grid (Data-Driven) === */
+(function () {
+  var teamGrid = document.getElementById('team-grid');
+  if (!teamGrid) return;
+
+  var teamMembers = [
+    {
+      name: 'Cedric Dupont',
+      initials: 'CD',
+      role: 'Founder & CEO',
+      bio: 'Visionary leader with 15+ years in software engineering. Passionate about leveraging AI to transform businesses.',
+      socials: { linkedin: '#', github: '#' }
+    },
+    {
+      name: 'Maya Chen',
+      initials: 'MC',
+      role: 'VP of Engineering',
+      bio: 'Full-stack architect specializing in cloud-native systems and distributed computing at scale.',
+      socials: { linkedin: '#', github: '#' }
+    },
+    {
+      name: 'Liam O\'Brien',
+      initials: 'LO',
+      role: 'Lead AI Engineer',
+      bio: 'Machine learning expert focused on NLP and predictive analytics. Former research scientist at a top AI lab.',
+      socials: { linkedin: '#', github: '#' }
+    },
+    {
+      name: 'Priya Sharma',
+      initials: 'PS',
+      role: 'Head of Security',
+      bio: 'Cybersecurity specialist with deep expertise in zero-trust architecture, SOC 2, and ISO 27001 compliance.',
+      socials: { linkedin: '#' }
+    },
+    {
+      name: 'Alex Rivera',
+      initials: 'AR',
+      role: 'Senior Cloud Architect',
+      bio: 'AWS and GCP certified architect. Designs resilient, cost-efficient infrastructure for high-traffic applications.',
+      socials: { linkedin: '#', github: '#' }
+    },
+    {
+      name: 'Sophie Tremblay',
+      initials: 'ST',
+      role: 'UX/UI Lead',
+      bio: 'User experience designer who bridges the gap between beautiful interfaces and intuitive functionality.',
+      socials: { linkedin: '#' }
+    }
+  ];
+
+  teamMembers.forEach(function (member) {
+    var card = document.createElement('div');
+    card.className = 'team-card reveal-on-scroll';
+    card.setAttribute('tabindex', '0');
+
+    var socialsHtml = '';
+    if (member.socials) {
+      socialsHtml = '<div class="team-socials">';
+      if (member.socials.linkedin) {
+        socialsHtml += '<a href="' + member.socials.linkedin + '" class="team-social-link" aria-label="' + member.name + ' LinkedIn">LinkedIn</a>';
+      }
+      if (member.socials.github) {
+        socialsHtml += '<a href="' + member.socials.github + '" class="team-social-link" aria-label="' + member.name + ' GitHub">GitHub</a>';
+      }
+      socialsHtml += '</div>';
+    }
+
+    card.innerHTML =
+      '<div class="team-avatar" aria-hidden="true">' + member.initials + '</div>' +
+      '<p class="team-name">' + member.name + '</p>' +
+      '<p class="team-role">' + member.role + '</p>' +
+      '<p class="team-bio">' + member.bio + '</p>' +
+      socialsHtml;
+
+    teamGrid.appendChild(card);
+  });
+})();
+
+/* === Scroll Reveal Animation === */
+(function () {
+  var elements = document.querySelectorAll('.reveal-on-scroll');
+  if (!elements.length) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  elements.forEach(function (el) { observer.observe(el); });
+})();
