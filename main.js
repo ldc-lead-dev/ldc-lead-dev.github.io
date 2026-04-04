@@ -137,6 +137,127 @@
   });
 })();
 
+/* === Contact Form Validation & Submission === */
+(function () {
+  var form = document.getElementById('contact-form');
+  var successEl = document.getElementById('contact-success');
+  var submitBtn = document.getElementById('contact-submit');
+  if (!form) return;
+
+  // Floating label fix for select
+  var serviceSelect = document.getElementById('contact-service');
+  if (serviceSelect) {
+    serviceSelect.addEventListener('change', function () {
+      if (this.value) {
+        this.classList.add('has-value');
+      } else {
+        this.classList.remove('has-value');
+      }
+    });
+  }
+
+  var validators = {
+    name: function (val) {
+      if (!val.trim()) return 'Name is required.';
+      if (val.trim().length < 2) return 'Name must be at least 2 characters.';
+      return '';
+    },
+    email: function (val) {
+      if (!val.trim()) return 'Email is required.';
+      // Simple but effective email regex
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim())) return 'Please enter a valid email address.';
+      return '';
+    },
+    service: function (val) {
+      if (!val) return 'Please select a service.';
+      return '';
+    },
+    message: function (val) {
+      if (!val.trim()) return 'Message is required.';
+      if (val.trim().length < 10) return 'Message must be at least 10 characters.';
+      return '';
+    }
+  };
+
+  function validateField(name) {
+    var input = form.querySelector('[name="' + name + '"]');
+    if (!input) return true;
+    var field = input.closest('.form-field');
+    var errorEl = document.getElementById('contact-' + name + '-error');
+    var error = validators[name](input.value);
+
+    if (error) {
+      field.classList.add('has-error');
+      if (errorEl) errorEl.textContent = error;
+      return false;
+    } else {
+      field.classList.remove('has-error');
+      if (errorEl) errorEl.textContent = '';
+      return true;
+    }
+  }
+
+  // Real-time inline validation on blur
+  ['name', 'email', 'service', 'message'].forEach(function (fieldName) {
+    var input = form.querySelector('[name="' + fieldName + '"]');
+    if (!input) return;
+
+    input.addEventListener('blur', function () {
+      // Only validate on blur if user has interacted
+      if (input.value || input.dataset.touched) {
+        input.dataset.touched = 'true';
+        validateField(fieldName);
+      }
+    });
+
+    // Clear error on input
+    input.addEventListener('input', function () {
+      input.dataset.touched = 'true';
+      var field = input.closest('.form-field');
+      if (field.classList.contains('has-error')) {
+        validateField(fieldName);
+      }
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Honeypot check
+    var hp = form.querySelector('[name="website"]');
+    if (hp && hp.value) return;
+
+    // Mark all fields as touched
+    ['name', 'email', 'service', 'message'].forEach(function (f) {
+      var input = form.querySelector('[name="' + f + '"]');
+      if (input) input.dataset.touched = 'true';
+    });
+
+    // Validate all fields
+    var valid = true;
+    ['name', 'email', 'service', 'message'].forEach(function (f) {
+      if (!validateField(f)) valid = false;
+    });
+
+    if (!valid) {
+      // Focus first error
+      var firstError = form.querySelector('.has-error input, .has-error textarea, .has-error select');
+      if (firstError) firstError.focus();
+      return;
+    }
+
+    // Show loading state
+    submitBtn.classList.add('loading');
+
+    // Simulate submission (replace with real API call)
+    setTimeout(function () {
+      submitBtn.classList.remove('loading');
+      form.hidden = true;
+      successEl.hidden = false;
+    }, 1500);
+  });
+})();
+
 /* === Testimonial Carousel === */
 (function () {
   const track = document.querySelector('.testimonial-track');

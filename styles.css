@@ -757,14 +757,56 @@ body {
   .values-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* === CTA === */
-.cta-box {
+/* === Contact Section === */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-info-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.contact-detail-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.contact-detail a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-detail a:hover {
+  color: #3a7cf0;
+}
+
+.contact-form-wrapper {
   position: relative;
-  text-align: center;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 24px;
-  padding: 80px 40px;
+  padding: 48px 40px;
   overflow: hidden;
 }
 
@@ -779,19 +821,198 @@ body {
   pointer-events: none;
 }
 
-.cta-title {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  margin: 16px 0 20px;
+/* Honeypot hidden field */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
-.cta-desc {
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-field {
+  position: relative;
+}
+
+/* Inputs and textarea */
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  padding: 16px 16px 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  -webkit-appearance: none;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-field select {
+  cursor: pointer;
+}
+
+/* Floating labels */
+.floating-label {
+  position: absolute;
+  left: 16px;
+  top: 14px;
   color: var(--text-muted);
-  font-size: 1.05rem;
-  max-width: 520px;
-  margin: 0 auto 36px;
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left top;
+}
+
+/* Float up when focused or filled */
+.form-field input:focus ~ .floating-label,
+.form-field input:not(:placeholder-shown) ~ .floating-label,
+.form-field textarea:focus ~ .floating-label,
+.form-field textarea:not(:placeholder-shown) ~ .floating-label,
+.form-field select:focus ~ .floating-label-select,
+.form-field select:not([value=""]):valid ~ .floating-label-select {
+  top: 4px;
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Select always shows label floated when a non-empty value is selected */
+.form-field select.has-value ~ .floating-label-select {
+  top: 4px;
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Focus bar animation */
+.field-focus-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 0 0 12px 12px;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field input:focus ~ .field-focus-bar,
+.form-field textarea:focus ~ .field-focus-bar,
+.form-field select:focus ~ .field-focus-bar {
+  left: 0;
+  width: 100%;
+}
+
+/* Focus glow */
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79,142,247,0.15);
+}
+
+/* Error state */
+.form-field.has-error input,
+.form-field.has-error textarea,
+.form-field.has-error select {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.12);
+}
+
+.form-field.has-error .floating-label {
+  color: #ef4444;
+}
+
+.field-error {
+  display: block;
+  min-height: 20px;
+  padding-top: 4px;
+  color: #ef4444;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.form-field.has-error .field-error {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Submit button states */
+.contact-submit {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.contact-submit.loading .btn-text { opacity: 0.6; }
+.contact-submit.loading .btn-spinner { display: block; }
+.contact-submit.loading { pointer-events: none; }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success state */
+.contact-success {
+  text-align: center;
+  padding: 40px 20px;
+  animation: fadeInUp 0.5s ease;
+}
+
+.success-icon {
+  color: #22c55e;
+  margin-bottom: 20px;
+}
+
+.success-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.success-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
   line-height: 1.7;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-form-wrapper { padding: 32px 24px; }
 }
 
 /* === Footer === */

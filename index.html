@@ -441,17 +441,100 @@
   <!-- CTA / Contact -->
   <section class="section" id="contact">
     <div class="container">
-      <div class="cta-box">
-        <div class="cta-glow"></div>
-        <span class="section-tag">Get In Touch</span>
-        <h2 class="cta-title">Ready to Build Something Great?</h2>
-        <p class="cta-desc">
-          Whether you have a clear vision or just a problem that needs solving, we'd love to hear from you.
-          Let's figure out how AI and modern software can move your business forward.
-        </p>
-        <a href="mailto:contact@ldc-software.com" class="btn btn-primary btn-lg">
-          contact@ldc-software.com
-        </a>
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Ready to Build Something Great?</h2>
+          <p class="contact-info-desc">
+            Whether you have a clear vision or just a problem that needs solving, we'd love to hear from you.
+            Let's figure out how AI and modern software can move your business forward.
+          </p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <span class="contact-detail-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <a href="mailto:contact@ldc-software.com">contact@ldc-software.com</a>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span>Canada</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrapper">
+          <div class="cta-glow"></div>
+          <form class="contact-form" id="contact-form" novalidate>
+            <!-- Honeypot field for spam protection -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="hp-website">Website</label>
+              <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="form-group">
+              <div class="form-field">
+                <input type="text" id="contact-name" name="name" required placeholder=" " autocomplete="name" />
+                <label for="contact-name" class="floating-label">Your Name</label>
+                <span class="field-focus-bar"></span>
+                <span class="field-error" id="contact-name-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-field">
+                <input type="email" id="contact-email" name="email" required placeholder=" " autocomplete="email" />
+                <label for="contact-email" class="floating-label">Email Address</label>
+                <span class="field-focus-bar"></span>
+                <span class="field-error" id="contact-email-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-field">
+                <select id="contact-service" name="service" required>
+                  <option value="" disabled selected></option>
+                  <option value="ai">AI Integration</option>
+                  <option value="cloud">Cloud Architecture</option>
+                  <option value="custom">Custom Software</option>
+                  <option value="devops">DevOps & CI/CD</option>
+                  <option value="data">Data & Analytics</option>
+                  <option value="other">Other</option>
+                </select>
+                <label for="contact-service" class="floating-label floating-label-select">Service Interested In</label>
+                <span class="field-focus-bar"></span>
+                <span class="field-error" id="contact-service-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-field">
+                <textarea id="contact-message" name="message" rows="4" required placeholder=" "></textarea>
+                <label for="contact-message" class="floating-label">Tell Us About Your Project</label>
+                <span class="field-focus-bar"></span>
+                <span class="field-error" id="contact-message-error" role="alert"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg contact-submit" id="contact-submit">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+
+          <!-- Success state -->
+          <div class="contact-success" id="contact-success" hidden>
+            <div class="success-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="success-title">Message Sent!</h3>
+            <p class="success-desc">Thanks for reaching out. We'll get back to you within 24 hours.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
