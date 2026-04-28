@@ -44,6 +44,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
+            --root-dir .
             --exclude "mailto:"
             --exclude "https://www.ldc-software.com"
             "**/*.html"

@@ -108,6 +108,11 @@ html = html.replace(
   /src="main\.js(\?v=\d+)?"/g,
   'src="/main.js$1"'
 );
+// Images and other assets in the assets/ directory
+html = html.replace(
+  /src="assets\//g,
+  'src="/assets/'
+);
 
 // ---------------------------------------------------------------------------
 // 8. Replace data-i18n element content with French translations
