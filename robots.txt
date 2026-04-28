@@ -1,0 +1,6 @@
+# robots.txt — www.ldc-software.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.ldc-software.com/sitemap.xml
