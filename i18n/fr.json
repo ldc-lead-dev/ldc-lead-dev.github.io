@@ -1,19 +1,19 @@
 {
   "_meta": {
-    "title": "LDC Software | Solutions logicielles innovantes propulsées par l'IA",
-    "description": "LDC Software — Solutions logicielles innovantes propulsées par l'IA pour les entreprises canadiennes et au-delà. Cloud natif, sécurisé et construit avec l'IA.",
-    "og_title": "LDC Software | Solutions logicielles innovantes propulsées par l'IA",
-    "og_description": "Nous créons des logiciels intelligents, natifs cloud, qui mettent l'IA au service de votre entreprise — pour que vous puissiez vous concentrer sur l'essentiel.",
+    "title": "LDC Software | Développement logiciel IA et cloud natif au Canada",
+    "description": "LDC Software conçoit des logiciels IA et cloud natifs pour les entreprises canadiennes. Développement sur mesure, intégration IA et architecture cloud sécurisée.",
+    "og_title": "LDC Software | Développement logiciel IA et cloud natif au Canada",
+    "og_description": "Nous concevons des logiciels IA et cloud natifs pour les entreprises canadiennes — développement sur mesure, intégration IA et architecture cloud sécurisée.",
     "og_locale": "fr_CA",
-    "twitter_title": "LDC Software | Solutions logicielles innovantes propulsées par l'IA",
-    "twitter_description": "Nous créons des logiciels intelligents, natifs cloud, qui mettent l'IA au service de votre entreprise."
+    "twitter_title": "LDC Software | Développement logiciel IA et cloud natif au Canada",
+    "twitter_description": "Nous concevons des logiciels IA et cloud natifs pour les entreprises canadiennes — développement sur mesure, intégration IA et architecture cloud sécurisée."
   },
   "nav_services": "Services",
   "nav_clients": "Clients",
   "nav_about": "À propos",
   "nav_contact": "Nous contacter",
   "hero_badge": "🇨🇦 Innovation canadienne",
-  "hero_title_html": "Logiciels conçus pour<br /><span class=\"gradient-text\">Les Leaders de Demain</span>",
+  "hero_title_html": "Logiciels IA conçus pour<br /><span class=\"gradient-text\">Les Leaders de Demain</span>",
   "hero_subtitle": "Nous créons des logiciels intelligents, natifs cloud, qui mettent l'IA au service de votre entreprise — pour que vous puissiez vous concentrer sur l'essentiel.",
   "hero_cta_1": "Démarrer un projet",
   "hero_cta_2": "Découvrir nos services",
