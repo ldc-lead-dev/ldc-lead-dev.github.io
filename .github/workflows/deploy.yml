@@ -44,8 +44,6 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --exclude "https://fonts.googleapis.com"
-            --exclude "https://fonts.gstatic.com"
             --exclude "mailto:"
             --exclude "https://www.ldc-software.com"
             "**/*.html"
