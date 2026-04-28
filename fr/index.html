@@ -40,14 +40,11 @@
   <meta name="twitter:description" content="Nous concevons des logiciels IA et cloud natifs pour les entreprises canadiennes — développement sur mesure, intégration IA et architecture cloud sécurisée." />
   <meta name="twitter:image" content="https://www.ldc-software.com/og-image.png" />
   <meta name="twitter:image:alt" content="LDC Software — AI &amp; cloud-native software development in Canada" />
-  <!-- Preconnect & Font Loading -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Self-hosted Inter font (preload critical latin subset) -->
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- Preload critical JS -->
-  <link rel="preload" href="main.js?v=3" as="script" />
+  <link rel="preload" href="/main.js?v=3" as="script" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -126,7 +123,7 @@
           "description": "Embed intelligent automation, natural language processing, and predictive analytics directly into your products and workflows.",
           "serviceType": "AI Integration",
           "provider": { "@id": "https://www.ldc-software.com/#organization" },
-          "url": "https://www.ldc-software.com/#services"
+          "url": "https://www.ldc-software.com/services/ai-integration/"
         },
         {
           "@type": "Service",
@@ -134,7 +131,7 @@
           "description": "Scalable, resilient, cost-efficient cloud infrastructure designed to grow with your business — on AWS, GCP, or Azure.",
           "serviceType": "Cloud Architecture",
           "provider": { "@id": "https://www.ldc-software.com/#organization" },
-          "url": "https://www.ldc-software.com/#services"
+          "url": "https://www.ldc-software.com/services/cloud-architecture/"
         },
         {
           "@type": "Service",
@@ -142,7 +139,7 @@
           "description": "Security is never an afterthought. We build with compliance, encryption, and zero-trust principles from day one.",
           "serviceType": "Cybersecurity Consulting",
           "provider": { "@id": "https://www.ldc-software.com/#organization" },
-          "url": "https://www.ldc-software.com/#services"
+          "url": "https://www.ldc-software.com/services/secure-by-design/"
         },
         {
           "@type": "Service",
@@ -150,7 +147,7 @@
           "description": "Bespoke applications tailored to your exact needs — web, mobile, APIs, and enterprise platforms.",
           "serviceType": "Custom Software Development",
           "provider": { "@id": "https://www.ldc-software.com/#organization" },
-          "url": "https://www.ldc-software.com/#services"
+          "url": "https://www.ldc-software.com/services/custom-software/"
         },
         {
           "@type": "Service",
@@ -158,7 +155,7 @@
           "description": "Continuous delivery pipelines, automated testing, and infrastructure-as-code so your teams ship with confidence.",
           "serviceType": "DevOps",
           "provider": { "@id": "https://www.ldc-software.com/#organization" },
-          "url": "https://www.ldc-software.com/#services"
+          "url": "https://www.ldc-software.com/services/devops-cicd/"
         },
         {
           "@type": "Service",
@@ -166,7 +163,7 @@
           "description": "Transform raw data into business intelligence with modern data pipelines, dashboards, and AI-driven insights.",
           "serviceType": "Data Analytics",
           "provider": { "@id": "https://www.ldc-software.com/#organization" },
-          "url": "https://www.ldc-software.com/#services"
+          "url": "https://www.ldc-software.com/services/data-analytics/"
         }
       ]
     }
@@ -388,7 +385,7 @@
       </div>
 
       <div class="services-grid">
-        <a href="#contact" class="service-card reveal-on-scroll" aria-label="AI Integration — learn more">
+        <a href="/services/ai-integration/" class="service-card reveal-on-scroll" aria-label="AI Integration — learn more">
           <div class="service-icon" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
@@ -400,7 +397,7 @@
           <p class="service-desc" data-i18n="svc1_desc">Intégrez l'automatisation intelligente, le traitement du langage naturel et l'analyse prédictive directement dans vos produits et processus.</p>
           <span class="service-link" data-i18n="svc_learn_html">En savoir plus <span aria-hidden="true">→</span></span>
         </a>
-        <a href="#contact" class="service-card reveal-on-scroll" aria-label="Cloud Architecture — learn more">
+        <a href="/services/cloud-architecture/" class="service-card reveal-on-scroll" aria-label="Cloud Architecture — learn more">
           <div class="service-icon" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 19a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6z"/>
@@ -413,7 +410,7 @@
           <p class="service-desc" data-i18n="svc2_desc">Infrastructure cloud évolutive, résiliente et économique conçue pour grandir avec votre entreprise — sur AWS, GCP ou Azure.</p>
           <span class="service-link" data-i18n="svc_learn_html">En savoir plus <span aria-hidden="true">→</span></span>
         </a>
-        <a href="#contact" class="service-card reveal-on-scroll" aria-label="Secure by Design — learn more">
+        <a href="/services/secure-by-design/" class="service-card reveal-on-scroll" aria-label="Secure by Design — learn more">
           <div class="service-icon" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="11" width="18" height="11" rx="2"/>
@@ -425,7 +422,7 @@
           <p class="service-desc" data-i18n="svc3_desc">La sécurité n'est jamais une réflexion secondaire. Nous construisons avec conformité, chiffrement et principes zéro confiance dès le premier jour.</p>
           <span class="service-link" data-i18n="svc_learn_html">En savoir plus <span aria-hidden="true">→</span></span>
         </a>
-        <a href="#contact" class="service-card reveal-on-scroll" aria-label="Custom Software — learn more">
+        <a href="/services/custom-software/" class="service-card reveal-on-scroll" aria-label="Custom Software — learn more">
           <div class="service-icon" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -435,7 +432,7 @@
           <p class="service-desc" data-i18n="svc4_desc">Applications personnalisées adaptées à vos besoins précis — web, mobile, APIs et plateformes d'entreprise.</p>
           <span class="service-link" data-i18n="svc_learn_html">En savoir plus <span aria-hidden="true">→</span></span>
         </a>
-        <a href="#contact" class="service-card reveal-on-scroll" aria-label="DevOps and CI/CD — learn more">
+        <a href="/services/devops-cicd/" class="service-card reveal-on-scroll" aria-label="DevOps and CI/CD — learn more">
           <div class="service-icon" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
@@ -445,7 +442,7 @@
           <p class="service-desc" data-i18n="svc5_desc">Pipelines de livraison continue, tests automatisés et infrastructure-as-code pour que vos équipes livrent en toute confiance.</p>
           <span class="service-link" data-i18n="svc_learn_html">En savoir plus <span aria-hidden="true">→</span></span>
         </a>
-        <a href="#contact" class="service-card reveal-on-scroll" aria-label="Data and Analytics — learn more">
+        <a href="/services/data-analytics/" class="service-card reveal-on-scroll" aria-label="Data and Analytics — learn more">
           <div class="service-icon" aria-hidden="true">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 3v18h18"/>
@@ -962,10 +959,12 @@
         <div class="footer-col">
           <h4 class="footer-col-title">Services</h4>
           <ul class="footer-links">
-            <li><a href="#contact">AI Integration</a></li>
-            <li><a href="#contact">Cloud Architecture</a></li>
-            <li><a href="#contact">Custom Software</a></li>
-            <li><a href="#contact">DevOps & CI/CD</a></li>
+            <li><a href="/services/ai-integration/">AI Integration</a></li>
+            <li><a href="/services/cloud-architecture/">Cloud Architecture</a></li>
+            <li><a href="/services/secure-by-design/">Secure by Design</a></li>
+            <li><a href="/services/custom-software/">Custom Software</a></li>
+            <li><a href="/services/devops-cicd/">DevOps & CI/CD</a></li>
+            <li><a href="/services/data-analytics/">Data & Analytics</a></li>
           </ul>
         </div>
 
@@ -995,6 +994,6 @@
     </div>
   </footer>
 
-  <script src="main.js?v=3" defer></script>
+  <script src="/main.js?v=3" defer></script>
 </body>
 </html>
