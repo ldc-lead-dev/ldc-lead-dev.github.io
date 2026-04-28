@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Custom software development for Canadian businesses. Web apps, mobile apps, APIs, enterprise platforms, and MVP development by LDC Software." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="LDC Software Inc." />
+  <meta name="theme-color" content="#0a0d14" />
+  <title>Custom Software Development | LDC Software</title>
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0d14'/%3E%3Ctext x='4' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='800' fill='%234f8ef7'%3ELDC%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ldc-software.com/services/custom-software/" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://www.ldc-software.com/services/custom-software/" />
+  <link rel="alternate" hreflang="fr" href="https://www.ldc-software.com/fr/services/custom-software/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ldc-software.com/services/custom-software/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Custom Software Development | LDC Software" />
+  <meta property="og:description" content="Custom software development for Canadian businesses. Web apps, mobile apps, APIs, enterprise platforms, and MVP development by LDC Software." />
+  <meta property="og:url" content="https://www.ldc-software.com/services/custom-software/" />
+  <meta property="og:site_name" content="LDC Software" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://www.ldc-software.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Custom Software Development — LDC Software" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Custom Software Development | LDC Software" />
+  <meta name="twitter:description" content="Custom software development for Canadian businesses. Web apps, mobile apps, APIs, enterprise platforms, and MVP development." />
+  <meta name="twitter:image" content="https://www.ldc-software.com/og-image.png" />
+  <meta name="twitter:image:alt" content="Custom Software Development — LDC Software" />
+
+  <!-- Preconnect & Font Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Preload critical JS -->
+  <link rel="preload" href="/main.js?v=3" as="script" />
+
+  <!-- JSON-LD: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Software Development",
+    "serviceType": "Custom Software Development",
+    "provider": {
+      "@id": "https://www.ldc-software.com/#organization"
+    },
+    "url": "https://www.ldc-software.com/services/custom-software/",
+    "description": "Custom software development for Canadian businesses. Web apps, mobile apps, APIs, enterprise platforms, and MVP development by LDC Software.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Canada"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ldc-software.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.ldc-software.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Custom Software Development",
+        "item": "https://www.ldc-software.com/services/custom-software/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Critical CSS (above-the-fold) -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0d14; --bg-card: #111621; --bg-dark: #070a10;
+      --border: rgba(255,255,255,0.07); --text: #e8eaf0; --text-muted: #8b92a8;
+      --accent: #4f8ef7; --accent-2: #a259f7; --accent-glow: rgba(79,142,247,0.25);
+      --radius: 16px; --font: 'Inter', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text); font-family: var(--font);
+      font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .nav {
+      position: sticky; top: 0; z-index: 100; backdrop-filter: blur(16px);
+      background: rgba(10,13,20,0.85); border-bottom: 1px solid var(--border);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-size: 1.2rem; font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+    .logo span { color: var(--accent); }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: 32px; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-hamburger { display: none; }
+    .btn {
+      display: inline-block; padding: 12px 28px; border-radius: 10px;
+      font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer;
+    }
+    .btn-sm { padding: 8px 18px; font-size: 0.85rem; border-radius: 8px; background: var(--accent); color: #fff; }
+    .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 0 24px var(--accent-glow); }
+    .btn-ghost { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
+    .btn-lg { padding: 16px 40px; font-size: 1rem; }
+    .breadcrumb { padding: 16px 0; }
+    .breadcrumb-list { list-style: none; display: flex; align-items: center; gap: 8px; font-size: 0.85rem; }
+    .breadcrumb-list a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb-sep { color: var(--text-muted); opacity: 0.5; }
+    .breadcrumb-current { color: var(--text); font-weight: 500; }
+    .svc-hero { padding: 60px 0 80px; position: relative; overflow: hidden; }
+    .hero-glow {
+      position: absolute; top: -120px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(79,142,247,0.15) 0%, transparent 70%); pointer-events: none;
+    }
+    .svc-hero-tag {
+      display: inline-block; color: var(--accent); font-size: 0.8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px;
+    }
+    .svc-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.15;
+      letter-spacing: -0.03em; margin-bottom: 20px; max-width: 720px;
+    }
+    .svc-hero-desc { color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; max-width: 640px; margin-bottom: 32px; }
+    .svc-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .lang-toggle { display: flex; gap: 4px; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 3px; }
+    .lang-btn { background: transparent; border: none; color: var(--text-muted); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
+    .lang-btn.active { background: var(--accent); color: #fff; }
+    .skip-link {
+      position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+      background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 0 0 8px 0;
+      font-size: 0.9rem; font-weight: 600; text-decoration: none; z-index: 9999;
+    }
+    .skip-link:focus { position: fixed; left: 0; top: 0; width: auto; height: auto; overflow: visible; }
+  </style>
+
+  <!-- Defer non-critical CSS -->
+  <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="/styles.css" /></noscript>
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo" aria-label="LDC Software — home">LDC <span>Software</span></a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="/#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+        <li><a href="/#social-proof" class="nav-link" data-i18n="nav_clients">Clients</a></li>
+        <li><a href="/#about" class="nav-link" data-i18n="nav_about">About</a></li>
+        <li><a href="/#contact" class="btn btn-sm" data-i18n="nav_contact">Contact Us</a></li>
+        <li>
+          <div class="lang-toggle" role="radiogroup" aria-label="Language">
+            <button class="lang-btn active" data-lang="en" role="radio" aria-checked="true">EN</button>
+            <button class="lang-btn" data-lang="fr" role="radio" aria-checked="false">FR</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name" data-i18n="breadcrumb_home">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb-sep" aria-hidden="true">/</li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/#services" itemprop="item"><span itemprop="name" data-i18n="breadcrumb_services">Services</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumb-sep" aria-hidden="true">/</li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span class="breadcrumb-current" itemprop="name" data-i18n="breadcrumb_custom_software">Custom Software</span>
+          <meta itemprop="position" content="3" />
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="svc-hero">
+    <div class="container">
+      <span class="svc-hero-tag" data-i18n="csdev_hero_tag">Custom Development</span>
+      <h1 data-i18n="csdev_hero_title">Custom Software Development &mdash; <span class="gradient-text">Built Exactly for Your Business</span></h1>
+      <p class="svc-hero-desc" data-i18n="csdev_hero_desc">
+        Off-the-shelf tools force you to adapt your workflows to their limitations. We design and build
+        custom web applications, mobile apps, APIs, and enterprise platforms that fit the way you actually work &mdash;
+        giving you a genuine competitive edge.
+      </p>
+      <div class="svc-hero-actions">
+        <a href="/#contact" class="btn btn-primary" data-i18n="csdev_cta_start">Start Your Project</a>
+        <a href="/#contact" class="btn btn-ghost" data-i18n="csdev_cta_discovery">Book a Free Discovery Call</a>
+      </div>
+    </div>
+    <div class="hero-glow"></div>
+  </section>
+
+  <!-- Why Choose Custom Software? -->
+  <section class="svc-section">
+    <div class="container">
+      <h2 data-i18n="csdev_why_title">Why Choose Custom Software?</h2>
+      <p data-i18n="csdev_why_p1">
+        Generic software is built for the average business, not yours. It comes with features you will never use and
+        lacks the ones you need most. As your team grows and processes evolve, you end up stitching together
+        workarounds, spreadsheets, and third-party plugins just to keep up. The result is fragile, expensive,
+        and hard to scale.
+      </p>
+      <p data-i18n="csdev_why_p2">
+        Custom software eliminates that friction. Every screen, every workflow, and every integration is designed
+        around your real requirements. You get faster onboarding, higher adoption, cleaner data, and a platform
+        you can extend as your business changes &mdash; without waiting on a vendor's roadmap.
+      </p>
+      <p data-i18n="csdev_why_p3">
+        Whether you are launching a startup MVP or modernizing a legacy enterprise system, purpose-built software
+        delivers measurable ROI: lower operational costs, faster time-to-market, and the agility to move ahead of
+        your competitors.
+      </p>
+    </div>
+  </section>
+
+  <!-- What We Build -->
+  <section class="svc-section svc-section-dark">
+    <div class="container">
+      <h2 data-i18n="csdev_offerings_title">What We Build</h2>
+      <p data-i18n="csdev_offerings_desc">
+        From rapid prototypes to mission-critical enterprise platforms, we deliver full-stack solutions across
+        every layer of the modern technology stack.
+      </p>
+      <div class="svc-offerings-grid">
+        <div class="svc-offering-card">
+          <h3 data-i18n="csdev_offering1_title">Web Applications</h3>
+          <p data-i18n="csdev_offering1_desc">
+            Rich, responsive web platforms built with React, Vue, Angular, and Next.js. From internal dashboards
+            to customer-facing portals, we build full-stack web apps that perform at scale.
+          </p>
+        </div>
+        <div class="svc-offering-card">
+          <h3 data-i18n="csdev_offering2_title">Mobile Applications</h3>
+          <p data-i18n="csdev_offering2_desc">
+            Native and cross-platform mobile apps for iOS and Android. We use React Native and native toolkits
+            to deliver smooth, high-performance experiences your users will love.
+          </p>
+        </div>
+        <div class="svc-offering-card">
+          <h3 data-i18n="csdev_offering3_title">APIs &amp; Integrations</h3>
+          <p data-i18n="csdev_offering3_desc">
+            RESTful and GraphQL APIs that connect your systems, automate workflows, and open your platform
+            to partners. We integrate with payment processors, CRMs, ERPs, and any third-party service you rely on.
+          </p>
+        </div>
+        <div class="svc-offering-card">
+          <h3 data-i18n="csdev_offering4_title">Enterprise Platforms &amp; SaaS</h3>
+          <p data-i18n="csdev_offering4_desc">
+            Scalable, multi-tenant platforms designed for security, performance, and compliance. We architect
+            SaaS products from the ground up with role-based access, audit logging, and elastic infrastructure.
+          </p>
+        </div>
+        <div class="svc-offering-card">
+          <h3 data-i18n="csdev_offering5_title">MVP &amp; Startup Products</h3>
+          <p data-i18n="csdev_offering5_desc">
+            Lean MVP development with rapid prototyping and iterative delivery. We help founders validate ideas
+            fast, ship to real users, and build a technical foundation that scales with growth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Technology Stack -->
+  <section class="svc-section">
+    <div class="container">
+      <h2 data-i18n="csdev_tech_title">Our Technology Stack</h2>
+      <p data-i18n="csdev_tech_desc">
+        We are technology-agnostic &mdash; we pick the right tools for each project. That said, our team has
+        deep production experience across the modern full-stack ecosystem.
+      </p>
+      <div class="svc-pills">
+        <span class="svc-pill">React</span>
+        <span class="svc-pill">Vue</span>
+        <span class="svc-pill">Angular</span>
+        <span class="svc-pill">Node.js</span>
+        <span class="svc-pill">Python</span>
+        <span class="svc-pill">TypeScript</span>
+        <span class="svc-pill">PostgreSQL</span>
+        <span class="svc-pill">MongoDB</span>
+        <span class="svc-pill">AWS</span>
+        <span class="svc-pill">Docker</span>
+        <span class="svc-pill">Kubernetes</span>
+        <span class="svc-pill">GraphQL</span>
+        <span class="svc-pill">REST APIs</span>
+        <span class="svc-pill">Next.js</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Development Process -->
+  <section class="svc-section svc-section-dark">
+    <div class="container">
+      <h2 data-i18n="csdev_process_title">Our Development Process</h2>
+      <p data-i18n="csdev_process_desc">
+        We follow an Agile, sprint-based methodology with continuous delivery. Every engagement moves through
+        five clear phases &mdash; with full transparency at every step.
+      </p>
+      <div class="svc-process-grid">
+        <div class="svc-process-step">
+          <span class="svc-step-num">1</span>
+          <h3 data-i18n="csdev_step1_title">Discovery &amp; Strategy</h3>
+          <p data-i18n="csdev_step1_desc">
+            We map your goals, users, and constraints. Product discovery and UX research ensure we solve
+            the right problem before writing a single line of code.
+          </p>
+        </div>
+        <div class="svc-process-step">
+          <span class="svc-step-num">2</span>
+          <h3 data-i18n="csdev_step2_title">Design &amp; Prototyping</h3>
+          <p data-i18n="csdev_step2_desc">
+            Interactive wireframes and high-fidelity prototypes let you test the experience early. We iterate
+            on feedback until the design is exactly right.
+          </p>
+        </div>
+        <div class="svc-process-step">
+          <span class="svc-step-num">3</span>
+          <h3 data-i18n="csdev_step3_title">Agile Development</h3>
+          <p data-i18n="csdev_step3_desc">
+            Two-week Scrum sprints with demo sessions. Full-stack engineers build front-end, back-end, and
+            infrastructure in parallel for maximum velocity.
+          </p>
+        </div>
+        <div class="svc-process-step">
+          <span class="svc-step-num">4</span>
+          <h3 data-i18n="csdev_step4_title">Testing &amp; QA</h3>
+          <p data-i18n="csdev_step4_desc">
+            Automated unit, integration, and end-to-end tests run on every commit. Performance and security
+            audits ensure your application is production-ready.
+          </p>
+        </div>
+        <div class="svc-process-step">
+          <span class="svc-step-num">5</span>
+          <h3 data-i18n="csdev_step5_title">Launch &amp; Support</h3>
+          <p data-i18n="csdev_step5_desc">
+            Zero-downtime deployments, monitoring, and alerting from day one. We offer ongoing maintenance,
+            iterative improvements, and dedicated support plans.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="svc-section">
+    <div class="container">
+      <h2 data-i18n="csdev_faq_title">Frequently Asked Questions</h2>
+      <div class="svc-faq-list">
+        <details class="svc-faq-item">
+          <summary data-i18n="csdev_faq1_q">How much does custom software cost?</summary>
+          <div class="svc-faq-answer">
+            <p data-i18n="csdev_faq1_a">
+              Projects range widely depending on scope and complexity. A focused MVP typically starts in the
+              $25K&ndash;$50K range, while full enterprise platforms can be significantly higher. We provide
+              transparent, detailed estimates after an initial discovery session so there are no surprises.
+            </p>
+          </div>
+        </details>
+        <details class="svc-faq-item">
+          <summary data-i18n="csdev_faq2_q">How long does it take to build custom software?</summary>
+          <div class="svc-faq-answer">
+            <p data-i18n="csdev_faq2_a">
+              MVPs can be delivered in 6&ndash;12 weeks. Full-featured platforms typically take 3&ndash;9 months
+              depending on complexity. We use Agile sprints and continuous delivery so you see working software
+              within the first two weeks.
+            </p>
+          </div>
+        </details>
+        <details class="svc-faq-item">
+          <summary data-i18n="csdev_faq3_q">What technologies do you use?</summary>
+          <div class="svc-faq-answer">
+            <p data-i18n="csdev_faq3_a">
+              Our core stack includes React, Node.js, Python, TypeScript, PostgreSQL, and AWS. We also work with
+              Vue, Angular, MongoDB, GraphQL, Docker, and Kubernetes. We choose the best tools for your project
+              rather than forcing a single framework.
+            </p>
+          </div>
+        </details>
+        <details class="svc-faq-item">
+          <summary data-i18n="csdev_faq4_q">Do you provide ongoing support after launch?</summary>
+          <div class="svc-faq-answer">
+            <p data-i18n="csdev_faq4_a">
+              Yes. We offer flexible maintenance and support plans that include monitoring, bug fixes, security
+              patches, and iterative feature development. Most clients continue working with us long after the
+              initial launch to keep their platform evolving.
+            </p>
+          </div>
+        </details>
+        <details class="svc-faq-item">
+          <summary data-i18n="csdev_faq5_q">Can you modernize our legacy application?</summary>
+          <div class="svc-faq-answer">
+            <p data-i18n="csdev_faq5_a">
+              Absolutely. We specialize in incremental legacy modernization &mdash; migrating monolithic systems
+              to modern, cloud-native architectures without disrupting your operations. We assess what to keep,
+              what to refactor, and what to rebuild from scratch.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="svc-section svc-section-dark">
+    <div class="container">
+      <h2 data-i18n="csdev_related_title">Related Services</h2>
+      <div class="svc-related-grid">
+        <a href="/services/ai-integration/" class="service-card" aria-label="AI Integration — learn more">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14H8a4 4 0 0 0-4 4v0a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v0a4 4 0 0 0-4-4z"/><circle cx="18" cy="5" r="3" fill="currentColor" stroke="none" opacity="0.4"/></svg>
+          </div>
+          <h3 class="service-title" data-i18n="csdev_related1_title">AI Integration</h3>
+          <p class="service-desc" data-i18n="csdev_related1_desc">Embed intelligent automation, NLP, and predictive analytics directly into your products and workflows.</p>
+          <span class="service-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/services/cloud-architecture/" class="service-card" aria-label="Cloud Architecture — learn more">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6z"/><path d="M2 15h20"/><path d="M9 22h6"/><path d="M12 19v3"/></svg>
+          </div>
+          <h3 class="service-title" data-i18n="csdev_related2_title">Cloud Architecture</h3>
+          <p class="service-desc" data-i18n="csdev_related2_desc">Scalable, resilient cloud infrastructure on AWS, GCP, or Azure &mdash; designed to grow with your business.</p>
+          <span class="service-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/services/devops-cicd/" class="service-card" aria-label="DevOps and CI/CD — learn more">
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h3 class="service-title" data-i18n="csdev_related3_title">DevOps &amp; CI/CD</h3>
+          <p class="service-desc" data-i18n="csdev_related3_desc">Continuous delivery pipelines, automated testing, and infrastructure-as-code so your teams ship with confidence.</p>
+          <span class="service-link">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="svc-cta">
+    <div class="container">
+      <h2 data-i18n="csdev_cta_title">Let's Build <span class="gradient-text">Something Great</span></h2>
+      <p data-i18n="csdev_cta_desc">
+        Whether you have a detailed specification or just a problem that needs solving, we would love to hear from you.
+        Tell us about your project and we will show you how custom software can move your business forward.
+      </p>
+      <div class="svc-cta-actions">
+        <a href="/#contact" class="btn btn-primary btn-lg" data-i18n="csdev_cta_start2">Start Your Project</a>
+        <a href="/#contact" class="btn btn-ghost btn-lg" data-i18n="csdev_cta_discovery2">Book a Free Discovery Call</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Company Info -->
+        <div class="footer-col footer-col-brand">
+          <a href="/" class="logo" aria-label="LDC Software — home">LDC <span>Software</span></a>
+          <p class="footer-brand-desc">Canadian-built, AI-powered software solutions for businesses ready to lead.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#about">About Us</a></li>
+            <li><a href="/#social-proof">Clients</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services/ai-integration/">AI Integration</a></li>
+            <li><a href="/services/cloud-architecture/">Cloud Architecture</a></li>
+            <li><a href="/services/custom-software/">Custom Software</a></li>
+            <li><a href="/services/devops-cicd/">DevOps &amp; CI/CD</a></li>
+            <li><a href="/services/data-analytics/">Data &amp; Analytics</a></li>
+            <li><a href="/services/secure-by-design/">Secure by Design</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <p class="footer-contact-line">
+            <a href="mailto:contact@ldc-software.com">contact@ldc-software.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 LDC Software Inc. &mdash; Canada</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=3" defer></script>
+</body>
+</html>

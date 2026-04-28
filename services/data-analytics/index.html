@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Data pipeline engineering, BI dashboards, data warehousing, and AI-driven analytics for Canadian businesses. Turn your data into decisions with LDC Software." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="LDC Software Inc." />
+  <meta name="theme-color" content="#0a0d14" />
+  <title>Data &amp; Analytics Services | LDC Software</title>
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0d14'/%3E%3Ctext x='4' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='800' fill='%234f8ef7'%3ELDC%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ldc-software.com/services/data-analytics/" />
+
+  <!-- Hreflang: bilingual EN/FR -->
+  <link rel="alternate" hreflang="en" href="https://www.ldc-software.com/services/data-analytics/" />
+  <link rel="alternate" hreflang="fr" href="https://www.ldc-software.com/fr/services/data-analytics/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.ldc-software.com/services/data-analytics/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Data &amp; Analytics Services | LDC Software" />
+  <meta property="og:description" content="Data pipeline engineering, BI dashboards, data warehousing, and AI-driven analytics for Canadian businesses. Turn your data into decisions with LDC Software." />
+  <meta property="og:url" content="https://www.ldc-software.com/services/data-analytics/" />
+  <meta property="og:site_name" content="LDC Software" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://www.ldc-software.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="LDC Software — Data &amp; Analytics Services" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data &amp; Analytics Services | LDC Software" />
+  <meta name="twitter:description" content="Data pipeline engineering, BI dashboards, data warehousing, and AI-driven analytics for Canadian businesses. Turn your data into decisions with LDC Software." />
+  <meta name="twitter:image" content="https://www.ldc-software.com/og-image.png" />
+  <meta name="twitter:image:alt" content="LDC Software — Data &amp; Analytics Services" />
+
+  <!-- Preconnect & Font Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Preload critical JS -->
+  <link rel="preload" href="/main.js?v=3" as="script" />
+
+  <!-- JSON-LD: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Data & Analytics Services",
+    "description": "Data pipeline engineering, BI dashboards, data warehousing, and AI-driven analytics for Canadian businesses.",
+    "serviceType": "Data Analytics",
+    "provider": { "@id": "https://www.ldc-software.com/#organization" },
+    "url": "https://www.ldc-software.com/services/data-analytics/",
+    "areaServed": { "@type": "Country", "name": "Canada" }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ldc-software.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.ldc-software.com/#services" },
+      { "@type": "ListItem", "position": 3, "name": "Data & Analytics", "item": "https://www.ldc-software.com/services/data-analytics/" }
+    ]
+  }
+  </script>
+
+  <!-- Critical CSS (above-the-fold) -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0d14; --bg-card: #111621; --bg-dark: #070a10;
+      --border: rgba(255,255,255,0.07); --text: #e8eaf0; --text-muted: #8b92a8;
+      --accent: #4f8ef7; --accent-2: #a259f7; --accent-glow: rgba(79,142,247,0.25);
+      --radius: 16px; --font: 'Inter', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text); font-family: var(--font);
+      font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .nav {
+      position: sticky; top: 0; z-index: 100; backdrop-filter: blur(16px);
+      background: rgba(10,13,20,0.85); border-bottom: 1px solid var(--border);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-size: 1.2rem; font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+    .logo span { color: var(--accent); }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: 32px; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-hamburger { display: none; }
+    .btn {
+      display: inline-block; padding: 12px 28px; border-radius: 10px;
+      font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer;
+    }
+    .btn-sm { padding: 8px 18px; font-size: 0.85rem; border-radius: 8px; background: var(--accent); color: #fff; }
+    .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 0 24px var(--accent-glow); }
+    .btn-ghost { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .lang-toggle { display: flex; gap: 4px; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 3px; }
+    .lang-btn { background: transparent; border: none; color: var(--text-muted); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
+    .lang-btn.active { background: var(--accent); color: #fff; }
+    .skip-link {
+      position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+      background: var(--accent); color: #fff; padding: 12px 24px; border-radius: 0 0 8px 0;
+      font-size: 0.9rem; font-weight: 600; text-decoration: none; z-index: 9999;
+    }
+    .skip-link:focus { position: fixed; left: 0; top: 0; width: auto; height: auto; overflow: visible; }
+  </style>
+
+  <!-- Defer non-critical CSS -->
+  <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="/styles.css" /></noscript>
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo" aria-label="LDC Software — Home">LDC <span>Software</span></a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="/#services" class="nav-link">Services</a></li>
+        <li><a href="/#social-proof" class="nav-link">Clients</a></li>
+        <li><a href="/#about" class="nav-link">About</a></li>
+        <li><a href="/#contact" class="btn btn-sm">Contact Us</a></li>
+        <li>
+          <div class="lang-toggle" role="radiogroup" aria-label="Language">
+            <button class="lang-btn active" data-lang="en" role="radio" aria-checked="true">EN</button>
+            <button class="lang-btn" data-lang="fr" role="radio" aria-checked="false">FR</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb container" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+        <li class="breadcrumb-sep" aria-hidden="true">/</li>
+        <li><a href="/#services">Services</a></li>
+        <li class="breadcrumb-sep" aria-hidden="true">/</li>
+        <li class="breadcrumb-current" aria-current="page">Data &amp; Analytics</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="svc-hero">
+      <div class="hero-glow"></div>
+      <div class="container">
+        <span class="svc-hero-tag" data-i18n="svc_data_tag">Data &amp; Analytics</span>
+        <h1 data-i18n="svc_data_h1">Data &amp; Analytics Services &mdash; <span class="gradient-text">Turn Your Data Into Decisions</span></h1>
+        <p class="svc-hero-desc" data-i18n="svc_data_hero_desc">Your business generates more data than ever &mdash; but raw data alone does not drive results. We design and build end-to-end data pipelines, BI dashboards, and AI-driven analytics solutions that transform scattered information into clear, actionable insights. From data warehousing and real-time streaming to predictive models and visualization, we help Canadian businesses make faster, smarter, data-driven decisions.</p>
+        <div class="svc-hero-actions">
+          <a href="/#contact" class="btn btn-primary" data-i18n="svc_data_cta_start">Start Your Data Journey</a>
+          <a href="#our-services" class="btn btn-ghost" data-i18n="svc_data_cta_explore">Explore Our Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Data Analytics Matters Now -->
+    <section class="svc-section">
+      <div class="container">
+        <h2 data-i18n="svc_data_why_h2">Why Data Analytics Matters Now</h2>
+        <p data-i18n="svc_data_why_p1">Data-driven organizations consistently outperform their competitors. They make faster decisions, spot market trends before they become obvious, and allocate resources with precision instead of intuition. The shift from gut-feel to evidence-based strategy is no longer optional &mdash; it is the defining characteristic of companies that grow sustainably.</p>
+        <p data-i18n="svc_data_why_p2">Yet most businesses sit on vast amounts of untapped data locked in siloed systems, spreadsheets, and legacy databases. Without the right architecture &mdash; modern data pipelines, a well-designed data warehouse or lakehouse, and the right BI tools &mdash; that data remains a liability instead of an asset. The gap between collecting data and actually using it is where competitive advantage is won or lost.</p>
+        <p data-i18n="svc_data_why_p3">At LDC Software, we close that gap. We build the infrastructure, pipelines, and dashboards that turn your raw data into a strategic asset &mdash; so your team spends less time wrangling spreadsheets and more time acting on insights that move the business forward.</p>
+      </div>
+    </section>
+
+    <!-- Our Data Services -->
+    <section class="svc-section svc-section-dark" id="our-services">
+      <div class="container">
+        <h2 data-i18n="svc_data_offerings_h2">Our Data Services</h2>
+        <div class="svc-offerings-grid">
+          <div class="svc-offering-card">
+            <h3 data-i18n="svc_data_off1_h3">Data Pipeline Engineering (ETL/ELT)</h3>
+            <p data-i18n="svc_data_off1_desc">We design and build automated data pipelines that extract, transform, and load data from any source &mdash; APIs, databases, SaaS platforms, IoT devices &mdash; into your analytics environment. Using tools like Airflow, dbt, and Spark, we ensure your data flows are reliable, idempotent, and scalable, so your team always works with clean, up-to-date information.</p>
+          </div>
+          <div class="svc-offering-card">
+            <h3 data-i18n="svc_data_off2_h3">Data Warehousing &amp; Architecture</h3>
+            <p data-i18n="svc_data_off2_desc">We architect modern data warehouses and lakehouses on platforms like Snowflake, BigQuery, and Redshift. From dimensional modeling and schema design to performance tuning and cost optimization, we build a data foundation that supports fast queries, governed access, and seamless growth as your data volumes scale.</p>
+          </div>
+          <div class="svc-offering-card">
+            <h3 data-i18n="svc_data_off3_h3">BI Dashboards &amp; Visualization</h3>
+            <p data-i18n="svc_data_off3_desc">We create interactive dashboards and data visualizations using Tableau, Looker, Power BI, and Metabase &mdash; or build fully custom solutions when off-the-shelf tools fall short. Every dashboard is designed for clarity, speed, and self-service, giving your stakeholders the answers they need without waiting on analysts.</p>
+          </div>
+          <div class="svc-offering-card">
+            <h3 data-i18n="svc_data_off4_h3">AI-Driven Analytics &amp; Predictions</h3>
+            <p data-i18n="svc_data_off4_desc">Go beyond historical reporting with predictive models, anomaly detection, and automated insights powered by machine learning. We build and deploy models that forecast demand, identify risks, and surface patterns your team would never find manually &mdash; all integrated directly into your dashboards and workflows.</p>
+          </div>
+          <div class="svc-offering-card">
+            <h3 data-i18n="svc_data_off5_h3">Real-Time Data Streaming</h3>
+            <p data-i18n="svc_data_off5_desc">When batch processing is not fast enough, we implement real-time streaming architectures using Kafka, Flink, and event-driven pipelines. Whether you need live operational dashboards, real-time fraud detection, or instant BI connectors, we build systems that process and deliver data the moment it arrives.</p>
+          </div>
+          <div class="svc-offering-card">
+            <h3 data-i18n="svc_data_off6_h3">Data Governance &amp; Quality</h3>
+            <p data-i18n="svc_data_off6_desc">Good analytics depend on trustworthy data. We implement data validation rules, automated quality monitoring, lineage tracking, and governance frameworks that ensure your data is accurate, consistent, and compliant. From access controls to documentation, we help you build a culture of data trust across your organization.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies We Use -->
+    <section class="svc-section">
+      <div class="container">
+        <h2 data-i18n="svc_data_tech_h2">Technologies We Use</h2>
+        <p data-i18n="svc_data_tech_desc">We work with best-in-class tools across the modern data stack, choosing the right technology for each layer of your data architecture &mdash; from ingestion and transformation to storage, analysis, and visualization.</p>
+        <div class="svc-pills">
+          <span class="svc-pill">Snowflake</span>
+          <span class="svc-pill">BigQuery</span>
+          <span class="svc-pill">Redshift</span>
+          <span class="svc-pill">Tableau</span>
+          <span class="svc-pill">Looker</span>
+          <span class="svc-pill">Power BI</span>
+          <span class="svc-pill">dbt</span>
+          <span class="svc-pill">Airflow</span>
+          <span class="svc-pill">Spark</span>
+          <span class="svc-pill">Kafka</span>
+          <span class="svc-pill">Flink</span>
+          <span class="svc-pill">Python</span>
+          <span class="svc-pill">SQL</span>
+          <span class="svc-pill">Metabase</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Approach to Data -->
+    <section class="svc-section svc-section-dark">
+      <div class="container">
+        <h2 data-i18n="svc_data_process_h2">Our Approach to Data</h2>
+        <div class="svc-process-grid">
+          <div class="svc-process-step">
+            <div class="svc-step-num">1</div>
+            <h3 data-i18n="svc_data_step1_h3">Assess &amp; Discover</h3>
+            <p data-i18n="svc_data_step1_desc">We start by understanding your data landscape &mdash; what you collect, where it lives, and how it flows. We audit existing sources, identify gaps, and uncover the highest-value analytics opportunities tied to your business objectives.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="svc-step-num">2</div>
+            <h3 data-i18n="svc_data_step2_h3">Architect &amp; Design</h3>
+            <p data-i18n="svc_data_step2_desc">We design the data architecture that fits your needs &mdash; choosing the right warehouse, pipeline tools, and governance model. You get a clear blueprint covering data models, transformation logic, access controls, and integration points before any code is written.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="svc-step-num">3</div>
+            <h3 data-i18n="svc_data_step3_h3">Build &amp; Integrate</h3>
+            <p data-i18n="svc_data_step3_desc">We implement the pipelines, warehouse, dashboards, and predictive models defined in the blueprint. Everything is built with automated testing, version control, and documentation &mdash; ensuring your data infrastructure is maintainable and production-ready from day one.</p>
+          </div>
+          <div class="svc-process-step">
+            <div class="svc-step-num">4</div>
+            <h3 data-i18n="svc_data_step4_h3">Monitor &amp; Optimize</h3>
+            <p data-i18n="svc_data_step4_desc">After launch, we monitor pipeline health, data quality, and dashboard performance. We set up automated alerts for anomalies and failures, tune queries for speed, and iterate on models and reports as your business evolves and new data sources come online.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="svc-section">
+      <div class="container">
+        <h2 data-i18n="svc_data_faq_h2">Frequently Asked Questions</h2>
+        <div class="svc-faq-list">
+          <details class="svc-faq-item">
+            <summary data-i18n="svc_data_faq1_q">What is a data pipeline?</summary>
+            <div class="svc-faq-answer" data-i18n="svc_data_faq1_a">
+              <p>A data pipeline is an automated workflow that moves data from one or more sources &mdash; databases, APIs, files, SaaS tools &mdash; into a destination like a data warehouse or data lake. It handles extraction, transformation (cleaning, joining, aggregating), and loading (ETL or ELT), so your analytics are always built on fresh, reliable data without manual effort.</p>
+            </div>
+          </details>
+          <details class="svc-faq-item">
+            <summary data-i18n="svc_data_faq2_q">Which BI tools do you work with?</summary>
+            <div class="svc-faq-answer" data-i18n="svc_data_faq2_a">
+              <p>We work with all major BI platforms, including Tableau, Looker, Power BI, and Metabase. We also build custom dashboards and visualizations when your use case demands tailored interactivity, embedded analytics, or a branded reporting experience that goes beyond what off-the-shelf tools offer.</p>
+            </div>
+          </details>
+          <details class="svc-faq-item">
+            <summary data-i18n="svc_data_faq3_q">How do you ensure data quality?</summary>
+            <div class="svc-faq-answer" data-i18n="svc_data_faq3_a">
+              <p>We implement automated data validation rules at every stage of the pipeline &mdash; from ingestion to transformation to reporting. This includes schema checks, freshness monitoring, anomaly detection, and lineage tracking. We also establish governance frameworks with clear ownership, access controls, and documentation so your team can trust the data they see in every dashboard.</p>
+            </div>
+          </details>
+          <details class="svc-faq-item">
+            <summary data-i18n="svc_data_faq4_q">Can you build real-time analytics?</summary>
+            <div class="svc-faq-answer" data-i18n="svc_data_faq4_a">
+              <p>Yes. We design and deploy real-time streaming architectures using technologies like Apache Kafka and Apache Flink. Whether you need live operational dashboards, real-time event processing, or instant alerts, we build pipelines that process data as it arrives &mdash; with sub-second latency when your use case demands it.</p>
+            </div>
+          </details>
+          <details class="svc-faq-item">
+            <summary data-i18n="svc_data_faq5_q">How does AI enhance analytics?</summary>
+            <div class="svc-faq-answer" data-i18n="svc_data_faq5_a">
+              <p>AI and machine learning take analytics beyond historical reporting. Predictive models forecast future trends, anomaly detection flags issues before they escalate, and automated insights surface patterns your team would miss manually. We integrate these capabilities directly into your dashboards and workflows, so AI-driven intelligence becomes part of your daily decision-making process.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="svc-section svc-section-dark">
+      <div class="container">
+        <h2 data-i18n="svc_data_related_h2">Related Services</h2>
+        <div class="svc-related-grid">
+          <a href="/services/ai-integration/" class="service-card">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14H8a4 4 0 0 0-4 4v0a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v0a4 4 0 0 0-4-4z"/><circle cx="18" cy="5" r="3" fill="currentColor" stroke="none" opacity="0.4"/></svg>
+            </div>
+            <h3 class="service-title" data-i18n="svc_related_ai_title">AI Integration</h3>
+            <p class="service-desc" data-i18n="svc_related_ai_desc">Embed intelligent AI &mdash; NLP, predictive analytics, computer vision &mdash; directly into your products and workflows.</p>
+            <span class="service-link" data-i18n="svc_related_learn">Learn more &rarr;</span>
+          </a>
+          <a href="/services/cloud-architecture/" class="service-card">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6z"/><path d="M2 15h20"/><path d="M9 22h6"/><path d="M12 19v3"/></svg>
+            </div>
+            <h3 class="service-title" data-i18n="svc_related_cloud_title">Cloud Architecture</h3>
+            <p class="service-desc" data-i18n="svc_related_cloud_desc">Scalable, resilient cloud infrastructure designed to grow with your business &mdash; on AWS, GCP, or Azure.</p>
+            <span class="service-link" data-i18n="svc_related_learn">Learn more &rarr;</span>
+          </a>
+          <a href="/services/custom-software/" class="service-card">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="service-title" data-i18n="svc_related_custom_title">Custom Software</h3>
+            <p class="service-desc" data-i18n="svc_related_custom_desc">Bespoke applications tailored to your exact needs &mdash; web, mobile, APIs, and enterprise platforms.</p>
+            <span class="service-link" data-i18n="svc_related_learn">Learn more &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="svc-cta">
+      <div class="container">
+        <h2 data-i18n="svc_data_cta_h2">Unlock the Power of Your Data</h2>
+        <p data-i18n="svc_data_cta_desc">Whether you need to build your first data warehouse, modernize legacy pipelines, or add AI-driven predictions to your dashboards, our team is ready to help. Let's turn your data into a strategic advantage &mdash; with a clear plan, proven tools, and measurable results.</p>
+        <div class="svc-cta-actions">
+          <a href="/#contact" class="btn btn-primary btn-lg" data-i18n="svc_data_cta_start">Start Your Data Journey</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <a href="/" class="logo">LDC <span>Software</span></a>
+          <p class="footer-brand-desc">Canadian-built, AI-powered software solutions for businesses ready to lead.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#about">About Us</a></li>
+            <li><a href="/#social-proof">Clients</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services/ai-integration/">AI Integration</a></li>
+            <li><a href="/services/cloud-architecture/">Cloud Architecture</a></li>
+            <li><a href="/services/secure-by-design/">Secure by Design</a></li>
+            <li><a href="/services/custom-software/">Custom Software</a></li>
+            <li><a href="/services/devops-cicd/">DevOps &amp; CI/CD</a></li>
+            <li><a href="/services/data-analytics/">Data &amp; Analytics</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <p class="footer-brand-desc"><a href="mailto:contact@ldc-software.com" style="color: var(--accent); text-decoration: none;">contact@ldc-software.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 LDC Software Inc. &mdash; Canada</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=3" defer></script>
+</body>
+</html>
