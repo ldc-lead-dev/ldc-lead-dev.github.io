@@ -1,6 +1,6 @@
 # LDC Software — Website Landing Page
 
-Public-facing marketing site for [LDC Software](https://ldcsoftware.ca), deployed via GitHub Pages.
+Public-facing marketing site for [LDC Software](https://www.ldc-software.com), deployed via GitHub Pages.
 
 ## Tech stack
 
